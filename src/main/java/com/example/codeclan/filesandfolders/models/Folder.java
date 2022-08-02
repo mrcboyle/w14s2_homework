@@ -21,8 +21,8 @@ public class Folder {
     private List<File> files;
 
     @ManyToOne
-    @JoinColumn(name="folder_id", nullable = false)
-    @JsonIgnoreProperties({"people"})
+    @JoinColumn(name="person_id", nullable = false)
+    @JsonIgnoreProperties({"folders"})
     private Person person;
 
     public Folder(String title, Person person) {
